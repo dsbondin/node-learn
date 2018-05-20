@@ -1,8 +1,6 @@
-let sum = 0;
 process.argv = process.argv.slice(2);
-process.argv.forEach(function(number) {
-  sum += parseInt(number);
-});
+let sum = process.argv
+  .reduce((prev, next) => parseInt(prev) + parseInt(next))
 
 console.log(sum)
 
